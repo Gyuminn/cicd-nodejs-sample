@@ -1,5 +1,5 @@
 
-def label = "cicd-nodejs-sample-u00-${env.BUILD_NUMBER}"
+def label = "cicd-nodejs-sample-u03-${env.BUILD_NUMBER}"
 
 /* -------- functions ---------- */
 def notifySlack(STATUS, COLOR) {
@@ -25,7 +25,7 @@ podTemplate(
 {
 	node(label) {
 		stage("Get Source") {
-			git branch: 'main', url: 'https://github.com/hiondal/cicd-nodejs-sample.git'
+			git branch: 'main', url: 'https://github.com/Gyuminn/cicd-nodejs-sample.git'
         	} 
 
 		//-- Read pipeline.properties and setting variables
